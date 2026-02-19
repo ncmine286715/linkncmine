@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ncmine - Download Center</title>
+    <style>
+        :root {
+            --primary-color: #00ff41; 
+            --bg-color: #121212; 
+            --card-bg: #1e1e1e;
+            --text-color: #ffffff;
+            --accent-color: #38bdf8;
+            --warning-color: #f1c40f;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* VÍDEO FIXO NO TOPO (POP-UP) */
+        .video-popup {
+            position: fixed;
+            top: 20px; /* Fixado no topo */
+            right: 20px; /* Lado direito */
+            width: 220px;
+            height: 124px;
+            background: #000;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 9999; /* Garante que fique acima de tudo */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .video-popup iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .site-container {
+            width: 100%;
+            max-width: 900px;
+            min-height: 100vh;
+            background-color: #181818;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        .help-banner {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(241, 196, 15, 0.05);
+            border: 1px solid var(--warning-color);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .profile-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        .links-wrapper {
+            width: 90%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .category-title {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            width: 100%;
+        }
+
+        .link-item {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 500;
+            transition: background 0.2s;
+            display: block;
+        }
+
+        .link-item:hover {
+            background-color: #333;
+            border-color: var(--primary-color);
+        }
+
+        .featured {
+            background: linear-gradient(90deg, #1e1e1e, #1a2a1a);
+            border: 1px solid var(--accent-color);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .video-popup {
+                width: 140px;
+                height: 79px;
+                top: 10px;
+                right: 10px;
+            }
+            .profile-name { font-size: 1.8rem; }
+            .site-container { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-popup">
+        <iframe src="https://www.youtube.com/embed/fN4BennXjTY?autoplay=1&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div class="site-container">
+        
+        <div class="help-banner">
+            <strong style="color: var(--warning-color);">Dúvidas no Download?</strong><br>
+            <p style="font-size: 0.9rem; margin: 10px 0 0 0; color: #ccc;">
+                O tutorial está fixado no topo da tela para te ajudar!
+            </p>
+        </div>
+
+        <div class="profile-container">
+            <h1 class="profile-name">@ncmine</h1>
+            <p style="color: #aaa; margin-top: 5px;">Downloads Oficiais & Mods</p>
+        </div>
+
+        <div class="links-wrapper">
+            
+            <div class="category-title">Social & Apoio</div>
+            <a href="https://livepix.gg/ncmine" class="link-item featured" target="_blank">💎 Apoie no LivePix</a>
+            <a href="https://youtu.be/fN4BennXjTY?si=9J0W6FCFEWmg9Ll6" class="link-item" target="_blank">📺 Tutorial: Como baixar pelo TeraBox</a>
+            <a href="https://www.terabox.com/referral/4401850417561" class="link-item" target="_blank">💵 Ganhe em Dólar (Webmaster)</a>
+
+            <div class="category-title">Destaques & Utilitários</div>
+            <a href="https://doodslink.com/s/13I_xXRunc2Xu-NxMJu8G1Q" class="link-item" target="_blank">🚀 NC Optimize 1.0 (MCPack)</a>
+            <a href="https://terabox.com/s/1IsI2ihiKMNi3LwyXaBUgJA" class="link-item" target="_blank">💻 OderSo Launcher (Client que uso)</a>
+            <a href="https://1024terabox.com/s/1L0HwnauivzYoDhQZje8-hQ" class="link-item" target="_blank">⭐ Essentials (Sem perder conquistas)</a>
+            <a href="https://terabox.com/s/1ww126lBvJGw_z7CmLYzsZw" class="link-item" target="_blank">🛠️ NC Utilities (Beta)</a>
+
+            <div class="category-title">Mods & Addons de Gameplay</div>
+            <a href="https://terabox.com/s/1cFiOsSNkmEbGkHDh66BUvA" class="link-item" target="_blank">🏗️ STRUCTURE BUILDER 1.5 Beta</a>
+            <a href="https://terabox.com/s/17Xpywx3CKaNzU0kfsrdpqQ" class="link-item" target="_blank">📜 Command Runner</a>
+            <a href="https://terabox.com/s/10pXwMrrtHKzRbN05R4WBGA" class="link-item" target="_blank">🌽 Easy Farm Addon</a>
+            <a href="https://terabox.com/s/16du6rfr8MZPKFWaQ6aN8nA" class="link-item" target="_blank">🪄 Criativo Addon Graveto</a>
+            <a href="https://terabox.com/s/1qLEty2zb38QbR-AsOPk26A" class="link-item" target="_blank">⛏️ ChunkMiner (Com Conquistas)</a>
+            <a href="https://terabox.com/s/1AYCJfeUZGarKUraZKw-ulg" class="link-item" target="_blank">🌀 Teleport Addon</a>
+            <a href="https://terabox.com/s/1aCiTHOt4R_FrnrGSLxSEww" class="link-item" target="_blank">⛏️ Ultra Vein Miner UI</a>
+            <a href="https://terabox.com/s/1Fn3WwDeUORM6__PV3Gh-RQ" class="link-item" target="_blank">🧱 3x3x3 Breaker (Conquistas)</a>
+            <a href="https://terabox.com/s/1idBlhnxuDFcDZelYq7br-Q" class="link-item" target="_blank">🛡️ AutoTotem</a>
+            <a href="https://terabox.com/s/1KKr8NX6qpkzuI8hrOlA0vQ" class="link-item" target="_blank">✨ Auto Enchanter</a>
+            <a href="https://1024terabox.com/s/1B3PmMbLKyHrd9OvL_rgqlA" class="link-item" target="_blank">👁️ FORCE SPECTATOR</a>
+            <a href="https://1024terabox.com/s/1S1fawX4SDXHA2BtxU0C9ZQ" class="link-item" target="_blank">🌳 TREE CAPITATOR (Conquistas)</a>
+
+            <div class="category-title">Mineração & Recursos</div>
+            <a href="https://tpi.li/Xw7tX6jf" class="link-item" target="_blank">🔥 Overworld Netherite</a>
+            <a href="https://terabox.com/s/13yIyNuLgVnYEGSbAyxUZmA" class="link-item" target="_blank">💎 Diamond Ultra 200%</a>
+            <a href="https://terabox.com/s/1Hpb_my24ZHkBxYz4QpT-vw" class="link-item" target="_blank">🔗 MultiplyOres</a>
+            <a href="https://terabox.com/s/1CcNVeUfTHLaDmh93fKQJZw" class="link-item" target="_blank">⚒️ Minérios+</a>
+            <a href="https://terabox.com/s/1lqhERBCKMq9zn5lNr2RQDw" class="link-item" target="_blank">🌑 Netherite+++</a>
+            <a href="https://terabox.com/s/1TLKROACwExgP0YZBavFm6g" class="link-item" target="_blank">🥇 EasyNetherite</a>
+            <a href="https://terabox.com/s/1GGTwCXPDEANEFes7dPLAOA" class="link-item" target="_blank">💎 Diamond Plus</a>
+            <a href="https://terabox.com/s/1cFIO3_4j1eEo9Xz6cBnuWw" class="link-item" target="_blank">💎 Diamond Plus (Conquistas)</a>
+
+            <div class="category-title">Visual & Texturas</div>
+            <a href="https://terabox.com/s/1e49Gxu7KIDKOSeB4lxcJgg" class="link-item" target="_blank">📊 Holagram Pack</a>
+            <a href="https://terabox.com/s/1E9QWkt7xOJ0eN09WkS7VUA" class="link-item" target="_blank">🕶️ Night Vision (Conquistas)</a>
+            <a href="https://terabox.com/s/1Xp0e39wMQpYf_lNo_qfmwA" class="link-item" target="_blank">🕶️ Night Vision ATUALIZADA</a>
+            <a href="https://1024terabox.com/s/1G1oFreRN4WGGt1Wd80mq7g" class="link-item" target="_blank">🕶️ Night Vision Pack Textura</a>
+            <a href="https://terabox.com/s/1L2BbJGqhVWjeltnMLTNPwA" class="link-item" target="_blank">🎵 Spotify Texture</a>
+            <a href="https://doodslink.com/s/1YHMoKw8JiW6KM9qr-h8D3Q" class="link-item" target="_blank">☀️ Advanced Day Pack</a>
+
+            <div class="category-title">Uso nos Vídeos</div>
+            <a href="https://terabox.com/s/1q-4m7b2t4KBYGE9iFINyzQ" class="link-item" target="_blank">📏 Ferramentas Longes / Braços</a>
+            <a href="https://terabox.com/s/1-np-iVbs6y-3yLsEUCMyZA" class="link-item" target="_blank">⏱️ FPSCounter</a>
+            <a href="https://terabox.com/s/16r11rsXoMKvfvFyA1tzJdw" class="link-item" target="_blank">🗺️ Minimap</a>
+            <a href="https://1024terabox.com/s/17o6QyPvxG7P_Qv_ANYrRcg" class="link-item" target="_blank">🌈 RGB Outline</a>
+
+            <div class="category-title">Outros Addons</div>
+            <a href="https://terabox.com/s/1HPl8ckCqU83LxqGZsczl2Q" class="link-item" target="_blank">🚜 Holo 10 Farms Easy</a>
+            <a href="https://terabox.com/s/1Yl_Dzok1phob2wx8fghzew" class="link-item" target="_blank">👻 Atividade Paranormal 1.12.2</a>
+            <a href="https://terabox.com/s/17XMIxw_65It96at_8VCDGw" class="link-item" target="_blank">🧟 Apocalipse Zumbi</a>
+            <a href="https://terabox.com/s/1vA3lS0geVs3TxvnYI40NEw" class="link-item" target="_blank">🎒 Keep Inventory 1.21.81</a>
+            <a href="https://terabox.com/s/1QkbqGdA060B7LCHTWfqFCg" class="link-item" target="_blank">🦴 Infinity Bone</a>
+            <a href="https://terabox.com/s/1GriFYiAVIwK-2DLK2oKolA" class="link-item" target="_blank">🔋 Infinity XP</a>
+            <a href="https://terabox.com/s/1cQLpf5QMtszRxXQ314imLg" class="link-item" target="_blank">🛠️ Gilded Toolkit</a>
+            <a href="https://terabox.com/s/1h6XEBoLifzwbKoJTMTF7Kg" class="link-item" target="_blank">😇 GOODMODO</a>
+            <a href="https://terabox.com/s/1Ngjsyk2T9WbospnK0_cXRA" class="link-item" target="_blank">🚫 Damage Canceler</a>
+            <a href="https://terabox.com/s/16jMT3GeB7hkMjcISZL2gGA" class="link-item" target="_blank">🎆 Fogos Infinitos</a>
+
+        </div>
+
+        <footer>ncmine © 2026</footer>
+    </div>
+
+</body>
+</html>
