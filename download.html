@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -35,7 +34,6 @@
             background: #0a0a0a; border-radius: 12px;
             display: flex; align-items: center; justify-content: center;
         }
-        /* Native Banner ajustado */
         .native-ad-box {
             margin: 20px 0;
             padding: 10px;
@@ -79,7 +77,7 @@
         <div class="status-badge">Arquivo Verificado e Seguro</div>
         <h2 id="addon-name">Preparando Download...</h2>
 
-      <div class="ad-slot-rect">
+        <div class="ad-slot-rect">
             <script type="text/javascript">
                 atOptions = {
                     'key' : 'fcb60e0c14e3e4f702cec878cffed7a5',
@@ -105,7 +103,28 @@
     </div>
 
     <script>
-        // ... lógica do countdown permanece a mesma ...
+        const urlParams = new URLSearchParams(window.location.search);
+        const finalUrl = urlParams.get('url');
+        const name = urlParams.get('name');
+        if(name) document.getElementById('addon-name').textContent = decodeURIComponent(name);
+
+        let timeLeft = 15; 
+        const timerElement = document.getElementById('seconds');
+        const downloadBtn = document.getElementById('finalLink');
+        const smartBtn = document.getElementById('smartBtn');
+        const timerText = document.getElementById('timer');
+
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerText.style.display = 'none';
+                downloadBtn.style.display = 'block';
+                smartBtn.style.display = 'block';
+                downloadBtn.href = decodeURIComponent(finalUrl);
+            }
+        }, 1000);
     </script>
     
     <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
