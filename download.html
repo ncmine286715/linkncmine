@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download | ncmine</title>
+    <title>Download Center | ncmine</title>
     <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
     <style>
         body { background: #080808; color: white; font-family: sans-serif; text-align: center; padding: 10px; margin: 0; }
-        .card { max-width: 400px; margin: 0 auto; background: #121212; padding: 15px; border-radius: 15px; border: 1px solid #333; }
-        .timer { font-size: 2.2rem; color: #00ff41; font-weight: bold; margin: 10px 0; }
-        .btn-final { background: #00ff41; color: #000; padding: 18px; text-decoration: none; font-weight: bold; border-radius: 8px; display: none; width: 100%; box-sizing: border-box; }
-        .ad-slot { margin: 15px 0; min-height: 250px; background: #000; display: flex; justify-content: center; align-items: center; border-radius: 8px; }
+        .container { max-width: 400px; margin: 0 auto; background: #121212; padding: 15px; border-radius: 15px; border: 1px solid #333; }
+        .timer-txt { font-size: 2.5rem; color: #00ff41; font-weight: bold; margin: 10px 0; }
+        .btn-dl { background: #00ff41; color: #000; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 10px; display: none; width: 100%; box-sizing: border-box; }
+        .ad-space { margin: 15px 0; min-height: 250px; display: flex; justify-content: center; align-items: center; background: #000; border-radius: 8px; }
     </style>
 </head>
 <body>
 
-    <div class="ad-slot">
+    <div class="ad-space">
         <script type="text/javascript">
             atOptions = {'key' : 'fcb60e0c14e3e4f702cec878cffed7a5', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};
         </script>
         <script type="text/javascript" src="https://www.highperformanceformat.com/fcb60e0c14e3e4f702cec878cffed7a5/invoke.js"></script>
     </div>
 
-    <div class="card">
-        <h2 id="nomeMod" style="font-size: 1.1rem; margin: 5px 0;">Preparando arquivo...</h2>
-        <div id="contagem">Aguarde <span class="timer" id="segundos">15</span>s</div>
-        <a href="#" id="linkDownload" class="btn-final">BAIXAR MOD AGORA</a>
+    <div class="container">
+        <h2 id="modName" style="font-size: 1.2rem; margin: 0;">Preparando Arquivo...</h2>
+        <div id="countdown-box">
+            <p style="color: #888; margin-bottom: 0;">Link pronto em:</p>
+            <div class="timer-txt" id="timer">15</div>
+        </div>
+        <a href="#" id="finalLink" class="btn-dl">BAIXAR MOD AGORA</a>
     </div>
 
-    <div class="ad-slot">
+    <div class="ad-space">
         <script type="text/javascript">
             atOptions = {'key' : 'fcb60e0c14e3e4f702cec878cffed7a5', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};
         </script>
@@ -37,18 +40,18 @@
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        document.getElementById('nomeMod').textContent = decodeURIComponent(urlParams.get('name') || 'Download');
+        document.getElementById('modName').textContent = decodeURIComponent(urlParams.get('name') || 'Download');
         
-        let tempo = 15;
-        const intervalo = setInterval(() => {
-            tempo--;
-            document.getElementById('segundos').textContent = tempo;
-            if(tempo <= 0) {
-                clearInterval(intervalo);
-                document.getElementById('contagem').style.display = 'none';
-                const botao = document.getElementById('linkDownload');
-                botao.style.display = 'block';
-                botao.href = decodeURIComponent(urlParams.get('url'));
+        let timeLeft = 15;
+        const clock = setInterval(() => {
+            timeLeft--;
+            document.getElementById('timer').textContent = timeLeft;
+            if(timeLeft <= 0) {
+                clearInterval(clock);
+                document.getElementById('countdown-box').style.display = 'none';
+                const btn = document.getElementById('finalLink');
+                btn.style.display = 'block';
+                btn.href = decodeURIComponent(urlParams.get('url'));
             }
         }, 1000);
     </script>
