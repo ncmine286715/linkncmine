@@ -5,52 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aguarde o Download - ncmine</title>
     <style>
-        body { background: #121212; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
-        .box { max-width: 500px; margin: 40px auto; background: #181818; padding: 30px; border-radius: 12px; border: 1px solid #333; }
-        .ad-space { width: 100%; min-height: 250px; background: #1e1e1e; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-        .btn { 
-            background: #00ff41; color: black; padding: 20px; width: 100%;
-            font-size: 1.4rem; font-weight: bold; border: none; border-radius: 8px; 
-            cursor: pointer; display: none; text-decoration: none;
+        :root {
+            --primary-color: #00ff41; 
+            --bg-color: #121212; 
+            --card-bg: #181818;
         }
-        #timer { font-size: 1.2rem; color: #00ff41; margin: 20px 0; }
+        body { 
+            background: var(--bg-color); 
+            color: white; 
+            font-family: 'Segoe UI', Roboto, sans-serif; 
+            text-align: center; 
+            padding: 15px;
+            margin: 0;
+        }
+        .container { 
+            max-width: 500px; 
+            margin: 10px auto; 
+            background: var(--card-bg); 
+            padding: 20px; 
+            border-radius: 15px; 
+            border: 1px solid #333;
+        }
+        /* Slot para o banner 300x250 */
+        .ad-slot-rect { 
+            width: 300px; height: 250px; 
+            margin: 15px auto; 
+            background: #111; border-radius: 8px;
+            overflow: hidden;
+        }
+        /* Slot para o banner 160x300 (Skyscraper) */
+        .ad-slot-tall { 
+            width: 160px; height: 300px; 
+            margin: 15px auto; 
+            background: #111; border-radius: 8px;
+            overflow: hidden;
+        }
+        .btn-download { 
+            background: var(--primary-color); 
+            color: black; padding: 20px; 
+            width: 100%; display: none; 
+            text-decoration: none; font-size: 1.5rem; 
+            font-weight: 900; border-radius: 10px;
+            text-transform: uppercase; box-sizing: border-box;
+        }
+        #timer { font-size: 1.2rem; color: var(--primary-color); margin: 20px 0; font-weight: bold; }
+        h2 { font-size: 1.3rem; color: #eee; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <div class="box">
-        <h2 id="title">Preparando arquivo...</h2>
+    <div class="container">
+        <h2 id="addon-name">Preparando seu arquivo...</h2>
 
-        <div class="ad-space">
-            </div>
+        <div class="ad-slot-rect">
+            <script>
+                atOptions = {
+                    'key' : '426abcbdfb4a70aa4f9485b2ac18cca7',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/426abcbdfb4a70aa4f9485b2ac18cca7/invoke.js"></script>
+        </div>
 
-        <p id="timer">Seu link será liberado em <span id="sec">10</span>s...</p>
+        <p id="timer">O link aparecerá em <span id="seconds">10</span>s</p>
         
-        <a href="#" id="dl-btn" class="btn">CLIQUE PARA BAIXAR</a>
+        <a href="#" id="finalLink" class="btn-download">BAIXAR AGORA</a>
 
-        <div class="ad-space">
-            </div>
+        <div class="ad-slot-tall">
+            <script>
+                atOptions = {
+                    'key' : 'f62c6fdee83be2c4a8646d239bddc5c3',
+                    'format' : 'iframe',
+                    'height' : 300,
+                    'width' : 160,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/f62c6fdee83be2c4a8646d239bddc5c3/invoke.js"></script>
+        </div>
     </div>
 
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const finalUrl = params.get('url');
-        const addonName = params.get('name');
+        const urlParams = new URLSearchParams(window.location.search);
+        const finalUrl = urlParams.get('url');
+        const name = urlParams.get('name');
+        if(name) document.getElementById('addon-name').textContent = decodeURIComponent(name);
 
-        if(addonName) document.getElementById('title').innerText = decodeURIComponent(addonName);
+        let timeLeft = 10;
+        const timerElement = document.getElementById('seconds');
+        const downloadBtn = document.getElementById('finalLink');
+        const timerText = document.getElementById('timer');
 
-        let time = 10;
         const countdown = setInterval(() => {
-            time--;
-            document.getElementById('sec').innerText = time;
-            if(time <= 0) {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            if (timeLeft <= 0) {
                 clearInterval(countdown);
-                document.getElementById('timer').style.display = 'none';
-                const btn = document.getElementById('dl-btn');
-                btn.style.display = 'block';
-                btn.href = decodeURIComponent(finalUrl);
+                timerText.style.display = 'none';
+                downloadBtn.style.display = 'block';
+                downloadBtn.href = decodeURIComponent(finalUrl);
             }
         }, 1000);
     </script>
+
+    <script src="https://pl28764866.effectivegatecpm.com/02/9b/cb/029bcbca5bb141585a10179bdcab5012.js"></script>
+
 </body>
 </html>
