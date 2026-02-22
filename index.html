@@ -153,5 +153,17 @@
         });
     </script>
     <script src="https://pl28764866.effectivegatecpm.com/02/9b/cb/029bcbca5bb141585a10179bdcab5012.js"></script>
+    <script>
+    document.querySelectorAll('.link-item').forEach(link => {
+        const href = link.href;
+        if (href.includes('terabox') || href.includes('doodslink') || href.includes('tpi.li')) {
+            const name = encodeURIComponent(link.textContent.trim());
+            const target = encodeURIComponent(href);
+            // AGORA MANDA PARA VERIFY.HTML
+            link.href = `verify.html?name=${name}&url=${target}`;
+            link.removeAttribute('target');
+        }
+    });
+</script>
 </body>
 </html>
