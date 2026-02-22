@@ -51,18 +51,20 @@
         <p>Ao clicar, uma aba de validação será aberta. Não a feche.</p>
     </div>
 
-   <script>
+    <script>
         const params = new URLSearchParams(window.location.search);
-        // NOVO SMART LINK ATUALIZADO
-        const smartLink = "https://www.effectivegatecpm.com/apauhg8kni?key=15dca43b4c9d4504c35c5c3873b23dc6";
+        const smartLink = "https://www.effectivegatecpm.com/wkmf27xjg?key=0b7ad228bbad6d22d482c1d14da56160";
 
         function executarVerificacao() {
+            // 1. Efeito visual de Check
             document.getElementById('check-mark').style.display = 'block';
             document.getElementById('box').style.background = '#00ff41';
             document.getElementById('box').style.borderColor = '#00ff41';
 
+            // 2. Abre o Smart Link (Anúncio Lucrativo) numa nova aba
             window.open(smartLink, '_blank');
 
+            // 3. Muda a aba ATUAL para a Etapa 2 após um pequeno delay
             setTimeout(() => {
                 window.location.href = `etapa2.html?${params.toString()}`;
             }, 800);
