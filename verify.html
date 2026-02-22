@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Segurança - ncmine</title>
+    <style>
+        body { background: #0a0a0a; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .card { max-width: 400px; background: #1a1a1a; padding: 30px; border-radius: 20px; border: 1px solid #333; text-align: center; }
+        .btn-verify { 
+            background: #00ff41; color: black; padding: 20px; width: 100%; display: block;
+            text-decoration: none; font-size: 1.2rem; font-weight: 800; border-radius: 12px;
+            margin-top: 20px; cursor: pointer; border: none;
+        }
+        p { color: #888; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Verificação de Segurança</h2>
+        <p>Clique no botão abaixo para provar que você não é um robô e liberar o seu download.</p>
+        
+        <button id="verifyBtn" class="btn-verify">EU NÃO SOU UM ROBÔ</button>
+        
+        <p style="margin-top: 15px;">Aguarde o redirecionamento após o clique.</p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const smartLink = "https://www.effectivegatecpm.com/wkmf27xjg?key=0b7ad228bbad6d22d482c1d14da56160";
+
+        document.getElementById('verifyBtn').addEventListener('click', function() {
+            // 1. Abre o Smart Link em uma nova aba (Gera o lucro alto)
+            window.open(smartLink, '_blank');
+            
+            // 2. Manda a aba atual para a página de download com o contador
+            setTimeout(() => {
+                window.location.href = `download.html?${params.toString()}`;
+            }, 500);
+        });
+    </script>
+</body>
+</html>
