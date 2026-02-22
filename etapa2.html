@@ -3,48 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ncmine | Verificação</title>
+    <title>ETAPA 2 - ncmine</title>
     <style>
-        :root { --primary: #00ff41; --bg: #0a0a0a; --box: #151515; }
-        body { background: var(--bg); color: white; font-family: sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; overflow: hidden; }
-        .card { background: var(--box); border: 1px solid #333; border-radius: 16px; padding: 40px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
-        .captcha-area { background: #000; border: 1px solid #444; border-radius: 8px; padding: 20px; display: flex; align-items: center; margin: 30px 0; cursor: pointer; }
-        .check-box { width: 30px; height: 30px; border: 2px solid #555; background: #fff; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 15px; }
-        #check-icon { color: #008000; font-size: 24px; display: none; font-weight: bold; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; text-align: center; }
-        .btn-confirm { background: var(--primary); color: #000; padding: 22px 40px; text-decoration: none; font-weight: 800; border-radius: 12px; font-size: 1.2rem; margin-top: 25px; box-shadow: 0 0 20px rgba(0,255,65,0.4); }
+        body { background: #0a0a0a; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .box { text-align: center; padding: 30px; border: 2px solid #00ff41; border-radius: 15px; background: #111; max-width: 350px; }
+        .step { font-size: 0.8rem; color: #00ff41; font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
+        .loader { border: 4px solid #333; border-top: 4px solid #00ff41; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .btn-next { background: #00ff41; color: black; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 8px; display: none; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2 style="color: var(--primary);">VERIFICAÇÃO</h2>
-        <p>Prove que você não é um robô para liberar o download.</p>
-        <div class="captcha-area" onclick="startVerify()">
-            <div class="check-box" id="box"><span id="check-icon">✓</span></div>
-            <span style="font-weight: bold;">Sou Humano</span>
-            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="35" style="margin-left: auto;">
-        </div>
-    </div>
-
-    <div id="verify-overlay" class="overlay">
-        <h1 style="color: var(--primary);">SUCESSO!</h1>
-        <p style="color: #fff; padding: 0 20px;">Clique no botão abaixo para validar sua entrada e liberar o arquivo final.</p>
-        <a href="https://www.effectivegatecpm.com/uqkrx2v2?key=2b1f95e6504cbd03f05d9b92d48a4a91" id="adLink" target="_blank" class="btn-confirm">LIBERAR CONTEÚDO</a>
+    <div class="box">
+        <div class="step">Passo 2 de 3</div>
+        <h2>Aguarde a Validação...</h2>
+        <p>Estamos verificando o anúncio obrigatório na outra aba.</p>
+        <div class="loader" id="loader"></div>
+        <a href="#" id="nextBtn" class="btn-next">IR PARA O DOWNLOAD FINAL</a>
     </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        function startVerify() {
-            document.getElementById('check-icon').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('verify-overlay').style.display = 'flex';
-            }, 800);
-        }
-        document.getElementById('adLink').addEventListener('click', function() {
-            setTimeout(() => {
-                window.location.href = `etapa2.html?${params.toString()}`;
-            }, 1000);
-        });
+        
+        // Espera 5 segundos para o usuário "ver" o anúncio na outra aba
+        setTimeout(() => {
+            document.getElementById('loader').style.display = 'none';
+            const btn = document.getElementById('nextBtn');
+            btn.style.display = 'inline-block';
+            btn.href = `download.html?${params.toString()}`;
+        }, 5000);
     </script>
 </body>
 </html>
