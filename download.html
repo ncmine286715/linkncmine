@@ -3,27 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download ncmine</title>
+    <title>Download | ncmine</title>
+    <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
     <style>
-        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; padding: 50px 20px; }
-        .btn-download { background: #00ff41; color: #000; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 10px; display: none; font-size: 1.2rem; }
+        body { background: #080808; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
+        .card { max-width: 450px; margin: 20px auto; background: #121212; padding: 30px; border-radius: 20px; border: 1px solid #333; }
+        .timer { font-size: 2rem; color: #00ff41; font-weight: bold; margin: 20px 0; }
+        .btn { background: #00ff41; color: black; padding: 18px 30px; text-decoration: none; font-weight: bold; border-radius: 10px; display: none; }
+        .ad-slot { margin: 20px 0; min-height: 250px; background: #000; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     </style>
 </head>
 <body>
-    <h2 id="nomeMod">Preparando seu arquivo...</h2>
-    <div id="timer">Aguarde <span id="seg">15</span> segundos...</div>
-    <a href="#" id="botaoBaixar" class="btn-download">BAIXAR AGORA</a>
+    <div class="card">
+        <h2 id="nome">Preparando...</h2>
+        
+        <div class="ad-slot">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'fcb60e0c14e3e4f702cec878cffed7a5',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/fcb60e0c14e3e4f702cec878cffed7a5/invoke.js"></script>
+        </div>
+
+        <div id="status">Link liberado em: <div class="timer" id="seg">15</div></div>
+        <a href="#" id="final" class="btn">BAIXAR AGORA</a>
+    </div>
+
     <script>
         const p = new URLSearchParams(window.location.search);
-        document.getElementById('nomeMod').textContent = decodeURIComponent(p.get('name') || 'Arquivo');
+        document.getElementById('nome').textContent = decodeURIComponent(p.get('name') || 'Arquivo');
         let t = 15;
         const c = setInterval(() => {
             t--;
             document.getElementById('seg').textContent = t;
             if(t <= 0) {
                 clearInterval(c);
-                document.getElementById('timer').style.display = 'none';
-                const b = document.getElementById('botaoBaixar');
+                document.getElementById('status').style.display = 'none';
+                const b = document.getElementById('final');
                 b.style.display = 'inline-block';
                 b.href = decodeURIComponent(p.get('url'));
             }
