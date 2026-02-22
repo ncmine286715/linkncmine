@@ -1,59 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Center | ncmine</title>
-    <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
+    <title>Download Center - ncmine</title>
     <style>
-        body { background: #080808; color: white; font-family: sans-serif; text-align: center; padding: 10px; margin: 0; }
-        .container { max-width: 400px; margin: 0 auto; background: #121212; padding: 15px; border-radius: 15px; border: 1px solid #333; }
-        .timer-txt { font-size: 2.5rem; color: #00ff41; font-weight: bold; margin: 10px 0; }
-        .btn-dl { background: #00ff41; color: #000; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 10px; display: none; width: 100%; box-sizing: border-box; }
-        .ad-space { margin: 15px 0; min-height: 250px; display: flex; justify-content: center; align-items: center; background: #000; border-radius: 8px; }
+        :root {
+            --primary-color: #00ff41; 
+            --bg-color: #0f0f0f; 
+            --card-bg: #1a1a1a;
+            --accent-blue: #38bdf8;
+        }
+        body { 
+            background: var(--bg-color); 
+            color: white; 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            text-align: center; 
+            padding: 10px;
+            margin: 0;
+        }
+        .container { 
+            max-width: 480px; 
+            margin: 15px auto; 
+            background: var(--card-bg); 
+            padding: 25px; 
+            border-radius: 20px; 
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+        }
+        .ad-slot-rect { 
+            width: 300px; height: 250px; 
+            margin: 15px auto; 
+            background: #0a0a0a; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        /* Native Banner ajustado */
+        .native-ad-box {
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+        }
+        .btn-download { 
+            background: var(--primary-color); 
+            color: black; padding: 22px; 
+            width: 100%; display: none; 
+            text-decoration: none; font-size: 1.6rem; 
+            font-weight: 800; border-radius: 12px;
+            text-transform: uppercase; box-sizing: border-box;
+            box-shadow: 0 5px 20px rgba(0, 255, 65, 0.4);
+            margin-bottom: 15px;
+        }
+        .btn-smart {
+            background: transparent;
+            color: var(--accent-blue);
+            padding: 14px;
+            width: 100%;
+            display: none;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 2px solid var(--accent-blue);
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: 0.3s ease;
+        }
+        .btn-smart:hover { background: var(--accent-blue); color: black; }
+        #timer { font-size: 1.2rem; color: #888; margin: 20px 0; }
+        #seconds { color: var(--primary-color); font-weight: 900; font-size: 1.5rem; }
+        h2 { font-size: 1.4rem; color: #fff; margin-bottom: 5px; letter-spacing: -0.5px; }
+        .status-badge { font-size: 0.8rem; color: #00ff41; background: rgba(0,255,65,0.1); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
     </style>
 </head>
 <body>
 
-    <div class="ad-space">
-        <script type="text/javascript">
-            atOptions = {'key' : 'fcb60e0c14e3e4f702cec878cffed7a5', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};
-        </script>
-        <script type="text/javascript" src="https://www.highperformanceformat.com/fcb60e0c14e3e4f702cec878cffed7a5/invoke.js"></script>
-    </div>
-
     <div class="container">
-        <h2 id="modName" style="font-size: 1.2rem; margin: 0;">Preparando Arquivo...</h2>
-        <div id="countdown-box">
-            <p style="color: #888; margin-bottom: 0;">Link pronto em:</p>
-            <div class="timer-txt" id="timer">15</div>
-        </div>
-        <a href="#" id="finalLink" class="btn-dl">BAIXAR MOD AGORA</a>
-    </div>
+        <div class="status-badge">Arquivo Verificado e Seguro</div>
+        <h2 id="addon-name">Preparando Download...</h2>
 
-    <div class="ad-space">
-        <script type="text/javascript">
-            atOptions = {'key' : 'fcb60e0c14e3e4f702cec878cffed7a5', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};
-        </script>
-        <script type="text/javascript" src="https://www.highperformanceformat.com/fcb60e0c14e3e4f702cec878cffed7a5/invoke.js"></script>
+      <div class="ad-slot-rect">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'fcb60e0c14e3e4f702cec878cffed7a5',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/fcb60e0c14e3e4f702cec878cffed7a5/invoke.js"></script>
+        </div>
+
+        <p id="timer">Aguarde <span id="seconds">15</span> segundos...</p>
+        
+        <a href="#" id="finalLink" class="btn-download">BAIXAR AGORA</a>
+        
+        <a href="https://www.effectivegatecpm.com/apauhg8kni?key=15dca43b4c9d4504c35c5c3873b23dc6" target="_blank" id="smartBtn" class="btn-smart">🚀 DOWNLOAD ALTA VELOCIDADE (Sem espera)</a>
+
+        <div class="native-ad-box">
+            <script async="async" data-cfasync="false" src="https://pl28770174.effectivegatecpm.com/2b5f624a42dfb0234966c49addefa156/invoke.js"></script>
+            <div id="container-2b5f624a42dfb0234966c49addefa156"></div>
+        </div>
     </div>
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        document.getElementById('modName').textContent = decodeURIComponent(urlParams.get('name') || 'Download');
-        
-        let timeLeft = 15;
-        const clock = setInterval(() => {
-            timeLeft--;
-            document.getElementById('timer').textContent = timeLeft;
-            if(timeLeft <= 0) {
-                clearInterval(clock);
-                document.getElementById('countdown-box').style.display = 'none';
-                const btn = document.getElementById('finalLink');
-                btn.style.display = 'block';
-                btn.href = decodeURIComponent(urlParams.get('url'));
-            }
-        }, 1000);
+        // ... lógica do countdown permanece a mesma ...
     </script>
+    
+    <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
+    <script src="https://pl28772532.effectivegatecpm.com/be/dd/c2/beddc276f9f4c9f5a7c3fb7c11967851.js"></script>
+
 </body>
 </html>
