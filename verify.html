@@ -3,41 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificação de Segurança - ncmine</title>
+    <title>ncmine | Gateway de Segurança</title>
     <style>
-        body { background: #0a0a0a; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .card { max-width: 400px; background: #1a1a1a; padding: 30px; border-radius: 20px; border: 1px solid #333; text-align: center; }
-        .btn-verify { 
-            background: #00ff41; color: black; padding: 20px; width: 100%; display: block;
-            text-decoration: none; font-size: 1.2rem; font-weight: 800; border-radius: 12px;
-            margin-top: 20px; cursor: pointer; border: none;
+        :root { --primary: #00ff41; --bg: #080808; --panel: #111111; }
+        body { 
+            background: var(--bg); color: #e0e0e0; font-family: 'Consolas', monospace; 
+            display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; 
         }
-        p { color: #888; font-size: 0.9rem; }
+        .gateway-box {
+            background: var(--panel); width: 100%; max-width: 400px;
+            border: 1px solid #222; border-radius: 8px; padding: 30px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8); text-align: center;
+        }
+        .header { color: var(--primary); font-size: 0.9rem; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 10px; }
+        
+        /* Estilo Checkbox Realista */
+        .captcha-container {
+            background: #000; border: 1px solid #333; padding: 20px;
+            display: flex; align-items: center; gap: 15px; border-radius: 5px;
+            cursor: pointer; transition: 0.3s;
+        }
+        .captcha-container:hover { border-color: var(--primary); }
+        
+        .checkbox {
+            width: 24px; height: 24px; border: 2px solid #555; border-radius: 3px;
+            background: white; position: relative;
+        }
+        
+        #check-mark { display: none; color: black; font-weight: bold; font-size: 18px; line-height: 24px; }
+
+        p { font-size: 0.8rem; color: #666; margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h2>Verificação de Segurança</h2>
-        <p>Clique no botão abaixo para provar que você não é um robô e liberar o seu download.</p>
-        
-        <button id="verifyBtn" class="btn-verify">EU NÃO SOU UM ROBÔ</button>
-        
-        <p style="margin-top: 15px;">Aguarde o redirecionamento após o clique.</p>
+
+    <div class="gateway-box">
+        <div class="header">SISTEMA DE VERIFICAÇÃO NCMINE</div>
+        <h3 style="margin-bottom: 5px;">Acesso Restrito</h3>
+        <p style="margin-top: 0;">Confirme a sua identidade para prosseguir.</p>
+
+        <div class="captcha-container" onclick="executarVerificacao()">
+            <div class="checkbox" id="box"><span id="check-mark">✓</span></div>
+            <span style="font-family: sans-serif; font-weight: 600;">Sou Humano</span>
+            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="30" style="margin-left: auto;">
+        </div>
+
+        <p>Ao clicar, uma aba de validação será aberta. Não a feche.</p>
     </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const smartLink = "https://www.effectivegatecpm.com/wkmf27xjg?key=0b7ad228bbad6d22d482c1d14da56160";
 
-        document.getElementById('verifyBtn').addEventListener('click', function() {
-            // 1. Abre o Smart Link em uma nova aba (Gera o lucro alto)
+        function executarVerificacao() {
+            // 1. Efeito visual de Check
+            document.getElementById('check-mark').style.display = 'block';
+            document.getElementById('box').style.background = '#00ff41';
+            document.getElementById('box').style.borderColor = '#00ff41';
+
+            // 2. Abre o Smart Link (Anúncio Lucrativo) numa nova aba
             window.open(smartLink, '_blank');
-            
-            // 2. Manda a aba atual para a página de download com o contador
+
+            // 3. Muda a aba ATUAL para a Etapa 2 após um pequeno delay
             setTimeout(() => {
-                window.location.href = `download.html?${params.toString()}`;
-            }, 500);
-        });
+                window.location.href = `etapa2.html?${params.toString()}`;
+            }, 800);
+        }
     </script>
+
 </body>
 </html>
