@@ -25,6 +25,7 @@
     <script>
         const params = new URLSearchParams(window.location.search);
         
+        // Espera 5 segundos para o usuário "ver" o anúncio na outra aba
         setTimeout(() => {
             document.getElementById('loader').style.display = 'none';
             const btn = document.getElementById('nextBtn');
@@ -32,8 +33,5 @@
             btn.href = `download.html?${params.toString()}`;
         }, 5000);
     </script>
-
-    <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
-    <script src="https://pl28772532.effectivegatecpm.com/be/dd/c2/beddc276f9f4c9f5a7c3fb7c11967851.js"></script>
 </body>
 </html>
