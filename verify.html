@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ncmine | Verificação</title>
+    <title>Verificação ncmine</title>
     <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
     <style>
         body { background: #0a0a0a; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .card { background: #151515; border: 1px solid #333; border-radius: 15px; padding: 30px; width: 90%; max-width: 380px; text-align: center; }
-        .captcha-btn { background: #000; border: 1px solid #444; border-radius: 5px; padding: 15px; display: flex; align-items: center; cursor: pointer; margin: 20px 0; }
-        .check { width: 24px; height: 24px; border: 2px solid #555; background: #fff; border-radius: 3px; margin-right: 15px; display: flex; align-items: center; justify-content: center; }
-        #visto { color: green; font-weight: bold; display: none; }
-        .btn-ready { background: #00ff41; color: black; padding: 18px; text-decoration: none; font-weight: bold; border-radius: 8px; display: none; width: 100%; box-sizing: border-box; font-size: 1.1rem; }
+        .card { background: #111; border: 1px solid #333; padding: 25px; border-radius: 12px; text-align: center; width: 90%; max-width: 350px; }
+        .captcha-box { background: #000; border: 1px solid #444; padding: 15px; display: flex; align-items: center; cursor: pointer; margin: 20px 0; border-radius: 5px; }
+        .check { width: 22px; height: 22px; border: 2px solid #555; background: #fff; margin-right: 12px; display: flex; align-items: center; justify-content: center; }
+        #visto { color: #00ff41; font-weight: bold; display: none; }
+        .btn-prosseguir { background: #00ff41; color: #000; padding: 15px; text-decoration: none; font-weight: bold; border-radius: 5px; display: none; width: 100%; box-sizing: border-box; }
     </style>
 </head>
 <body>
     <div class="card">
         <h3>Verificação de Segurança</h3>
-        <p style="color: #888;">Clique abaixo para validar seu acesso.</p>
+        <p style="color: #aaa; font-size: 0.9rem;">Clique abaixo para validar seu acesso e prosseguir.</p>
         
-        <div class="captcha-btn" onclick="liberarComAnuncio()">
+        <div class="captcha-box" onclick="abrirAnuncioELiberar()">
             <div class="check"><span id="visto">✓</span></div>
             <span style="font-weight: bold;">Não sou um robô</span>
-            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="30" style="margin-left: auto;">
+            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="28" style="margin-left: auto;">
         </div>
 
-        <a href="javascript:void(0)" id="prosseguir" class="btn-ready" onclick="irEtapa2()">CONTINUAR</a>
+        <a href="javascript:void(0)" id="btnGo" class="btn-prosseguir" onclick="irEtapa2()">CONTINUAR</a>
     </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const smartLink = "https://www.effectivegatecpm.com/apauhg8kni?key=15dca43b4c9d4504c35c5c3873b23dc6";
+        // Seu Smart Link que mais rende
+        const linkAds = "https://www.effectivegatecpm.com/apauhg8kni?key=15dca43b4c9d4504c35c5c3873b23dc6";
 
-        function liberarComAnuncio() {
-            window.open(smartLink, '_blank'); // Abre o anúncio lucrativo
+        function abrirAnuncioELiberar() {
+            window.open(linkAds, '_blank');
             document.getElementById('visto').style.display = 'block';
-            document.getElementById('prosseguir').style.display = 'block';
+            document.getElementById('btnGo').style.display = 'block';
         }
 
         function irEtapa2() {
