@@ -17,28 +17,30 @@
 <body>
     <div class="card">
         <h3>Verificação de Segurança</h3>
-        <p style="color: #888;">Clique no campo abaixo para continuar.</p>
+        <p style="color: #888;">Clique abaixo para validar seu acesso.</p>
         
-        <div class="captcha-btn" onclick="liberar()">
+        <div class="captcha-btn" onclick="liberarComAnuncio()">
             <div class="check"><span id="visto">✓</span></div>
             <span style="font-weight: bold;">Não sou um robô</span>
             <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" width="30" style="margin-left: auto;">
         </div>
 
-        <a href="https://www.effectivegatecpm.com/uqkrx2v2?key=2b1f95e6504cbd03f05d9b92d48a4a91" id="prosseguir" target="_blank" class="btn-ready">CONTINUAR</a>
+        <a href="javascript:void(0)" id="prosseguir" class="btn-ready" onclick="irEtapa2()">CONTINUAR</a>
     </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        function liberar() {
+        const smartLink = "https://www.effectivegatecpm.com/apauhg8kni?key=15dca43b4c9d4504c35c5c3873b23dc6";
+
+        function liberarComAnuncio() {
+            window.open(smartLink, '_blank'); // Abre o anúncio lucrativo
             document.getElementById('visto').style.display = 'block';
             document.getElementById('prosseguir').style.display = 'block';
         }
-        document.getElementById('prosseguir').addEventListener('click', function() {
-            setTimeout(() => {
-                window.location.href = `etapa2.html?${params.toString()}`;
-            }, 1000);
-        });
+
+        function irEtapa2() {
+            window.location.href = `etapa2.html?${params.toString()}`;
+        }
     </script>
 </body>
 </html>
