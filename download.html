@@ -6,37 +6,37 @@
     <title>Download | ncmine</title>
     <script src="https://pl28772469.effectivegatecpm.com/08/e2/ad/08e2adfd57d4f8d6954e2f91225ed633.js"></script>
     <style>
-        body { background: #080808; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
-        .card { max-width: 450px; margin: 20px auto; background: #121212; padding: 30px; border-radius: 20px; border: 1px solid #333; }
-        .timer { font-size: 2rem; color: #00ff41; font-weight: bold; margin: 20px 0; }
-        .btn { background: #00ff41; color: black; padding: 18px 30px; text-decoration: none; font-weight: bold; border-radius: 10px; display: none; }
-        .ad-slot { margin: 20px 0; min-height: 250px; background: #000; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        body { background: #080808; color: white; font-family: sans-serif; text-align: center; padding: 10px; margin: 0; }
+        .card { max-width: 450px; margin: 10px auto; background: #121212; padding: 20px; border-radius: 20px; border: 1px solid #333; }
+        .timer { font-size: 2rem; color: #00ff41; font-weight: bold; margin: 15px 0; }
+        .btn { background: #00ff41; color: black; padding: 18px 30px; text-decoration: none; font-weight: bold; border-radius: 10px; display: none; width: 100%; box-sizing: border-box; }
+        .ad-container { margin: 15px 0; display: flex; justify-content: center; min-height: 250px; }
     </style>
 </head>
 <body>
     <div class="card">
-        <h2 id="nome">Preparando...</h2>
-        
-        <div class="ad-slot">
+        <div class="ad-container">
             <script type="text/javascript">
-                atOptions = {
-                    'key' : 'fcb60e0c14e3e4f702cec878cffed7a5',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                };
+                atOptions = {'key' : 'fcb60e0c14e3e4f702cec878cffed7a5', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};
             </script>
             <script type="text/javascript" src="https://www.highperformanceformat.com/fcb60e0c14e3e4f702cec878cffed7a5/invoke.js"></script>
         </div>
 
-        <div id="status">Link liberado em: <div class="timer" id="seg">15</div></div>
+        <h2 id="nome" style="font-size: 1.2rem;">Preparando Arquivo...</h2>
+        <div id="status">Disponível em: <div class="timer" id="seg">15</div></div>
         <a href="#" id="final" class="btn">BAIXAR AGORA</a>
+
+        <div class="ad-container" style="margin-top: 20px;">
+            <script type="text/javascript">
+                atOptions = {'key' : 'fcb60e0c14e3e4f702cec878cffed7a5', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {}};
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/fcb60e0c14e3e4f702cec878cffed7a5/invoke.js"></script>
+        </div>
     </div>
 
     <script>
         const p = new URLSearchParams(window.location.search);
-        document.getElementById('nome').textContent = decodeURIComponent(p.get('name') || 'Arquivo');
+        document.getElementById('nome').textContent = decodeURIComponent(p.get('name') || 'Download');
         let t = 15;
         const c = setInterval(() => {
             t--;
@@ -45,7 +45,7 @@
                 clearInterval(c);
                 document.getElementById('status').style.display = 'none';
                 const b = document.getElementById('final');
-                b.style.display = 'inline-block';
+                b.style.display = 'block';
                 b.href = decodeURIComponent(p.get('url'));
             }
         }, 1000);
