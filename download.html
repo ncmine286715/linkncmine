@@ -9,6 +9,7 @@
             --primary-color: #00ff41; 
             --bg-color: #121212; 
             --card-bg: #181818;
+            --secondary-color: #38bdf8;
         }
         body { 
             background: var(--bg-color); 
@@ -26,14 +27,12 @@
             border-radius: 15px; 
             border: 1px solid #333;
         }
-        /* Slot para o banner 300x250 */
         .ad-slot-rect { 
             width: 300px; height: 250px; 
             margin: 15px auto; 
             background: #111; border-radius: 8px;
             overflow: hidden;
         }
-        /* Slot para o banner 160x300 (Skyscraper) */
         .ad-slot-tall { 
             width: 160px; height: 300px; 
             margin: 15px auto; 
@@ -47,6 +46,25 @@
             text-decoration: none; font-size: 1.5rem; 
             font-weight: 900; border-radius: 10px;
             text-transform: uppercase; box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        /* Estilo para o Botão do Smart Link */
+        .btn-smart {
+            background: transparent;
+            color: var(--secondary-color);
+            padding: 12px;
+            width: 100%;
+            display: none;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--secondary-color);
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+        .btn-smart:hover {
+            background: rgba(56, 189, 248, 0.1);
         }
         #timer { font-size: 1.2rem; color: var(--primary-color); margin: 20px 0; font-weight: bold; }
         h2 { font-size: 1.3rem; color: #eee; margin-bottom: 10px; }
@@ -73,6 +91,8 @@
         <p id="timer">O link aparecerá em <span id="seconds">10</span>s</p>
         
         <a href="#" id="finalLink" class="btn-download">BAIXAR AGORA</a>
+        
+        <a href="https://www.effectivegatecpm.com/wkmf27xjg?key=0b7ad228bbad6d22d482c1d14da56160" target="_blank" id="smartBtn" class="btn-smart">Problemas no download? Use o Servidor 2</a>
 
         <div class="ad-slot-tall">
             <script>
@@ -97,6 +117,7 @@
         let timeLeft = 10;
         const timerElement = document.getElementById('seconds');
         const downloadBtn = document.getElementById('finalLink');
+        const smartBtn = document.getElementById('smartBtn');
         const timerText = document.getElementById('timer');
 
         const countdown = setInterval(() => {
@@ -106,11 +127,13 @@
                 clearInterval(countdown);
                 timerText.style.display = 'none';
                 downloadBtn.style.display = 'block';
+                smartBtn.style.display = 'block'; // Mostra o botão do Smart Link junto
                 downloadBtn.href = decodeURIComponent(finalUrl);
             }
         }, 1000);
     </script>
-<script src="https://pl28769655.effectivegatecpm.com/44/2c/25/442c25d5418ffc7ab359cbe3a60e22d1.js"></script>
+    
+    <script src="https://pl28769655.effectivegatecpm.com/44/2c/25/442c25d5418ffc7ab359cbe3a60e22d1.js"></script>
     <script src="https://pl28764866.effectivegatecpm.com/02/9b/cb/029bcbca5bb141585a10179bdcab5012.js"></script>
 
 </body>
