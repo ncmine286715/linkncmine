@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguarde o Download - ncmine</title>
+    <style>
+        body { background: #121212; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
+        .box { max-width: 500px; margin: 40px auto; background: #181818; padding: 30px; border-radius: 12px; border: 1px solid #333; }
+        .ad-space { width: 100%; min-height: 250px; background: #1e1e1e; margin: 20px 0; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .btn { 
+            background: #00ff41; color: black; padding: 20px; width: 100%;
+            font-size: 1.4rem; font-weight: bold; border: none; border-radius: 8px; 
+            cursor: pointer; display: none; text-decoration: none;
+        }
+        #timer { font-size: 1.2rem; color: #00ff41; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2 id="title">Preparando arquivo...</h2>
+
+        <div class="ad-space">
+            </div>
+
+        <p id="timer">Seu link será liberado em <span id="sec">10</span>s...</p>
+        
+        <a href="#" id="dl-btn" class="btn">CLIQUE PARA BAIXAR</a>
+
+        <div class="ad-space">
+            </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const finalUrl = params.get('url');
+        const addonName = params.get('name');
+
+        if(addonName) document.getElementById('title').innerText = decodeURIComponent(addonName);
+
+        let time = 10;
+        const countdown = setInterval(() => {
+            time--;
+            document.getElementById('sec').innerText = time;
+            if(time <= 0) {
+                clearInterval(countdown);
+                document.getElementById('timer').style.display = 'none';
+                const btn = document.getElementById('dl-btn');
+                btn.style.display = 'block';
+                btn.href = decodeURIComponent(finalUrl);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
