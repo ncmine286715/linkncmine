@@ -3,108 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aguarde o Download - ncmine</title>
+    <title>Download Center - ncmine</title>
     <style>
         :root {
             --primary-color: #00ff41; 
-            --bg-color: #121212; 
-            --card-bg: #181818;
-            --secondary-color: #38bdf8;
+            --bg-color: #0f0f0f; 
+            --card-bg: #1a1a1a;
+            --accent-blue: #38bdf8;
         }
         body { 
             background: var(--bg-color); 
             color: white; 
-            font-family: 'Segoe UI', Roboto, sans-serif; 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
             text-align: center; 
-            padding: 15px;
+            padding: 10px;
             margin: 0;
         }
         .container { 
-            max-width: 500px; 
-            margin: 10px auto; 
+            max-width: 480px; 
+            margin: 15px auto; 
             background: var(--card-bg); 
-            padding: 20px; 
-            border-radius: 15px; 
-            border: 1px solid #333;
+            padding: 25px; 
+            border-radius: 20px; 
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
         }
         .ad-slot-rect { 
             width: 300px; height: 250px; 
             margin: 15px auto; 
-            background: #111; border-radius: 8px;
-            overflow: hidden;
+            background: #0a0a0a; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
         }
-        .ad-slot-tall { 
-            width: 160px; height: 300px; 
-            margin: 15px auto; 
-            background: #111; border-radius: 8px;
-            overflow: hidden;
+        /* Native Banner ajustado */
+        .native-ad-box {
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
         }
         .btn-download { 
             background: var(--primary-color); 
-            color: black; padding: 20px; 
+            color: black; padding: 22px; 
             width: 100%; display: none; 
-            text-decoration: none; font-size: 1.5rem; 
-            font-weight: 900; border-radius: 10px;
+            text-decoration: none; font-size: 1.6rem; 
+            font-weight: 800; border-radius: 12px;
             text-transform: uppercase; box-sizing: border-box;
-            margin-bottom: 10px;
+            box-shadow: 0 5px 20px rgba(0, 255, 65, 0.4);
+            margin-bottom: 15px;
         }
-        /* Estilo para o Botão do Smart Link */
         .btn-smart {
             background: transparent;
-            color: var(--secondary-color);
-            padding: 12px;
+            color: var(--accent-blue);
+            padding: 14px;
             width: 100%;
             display: none;
             text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid var(--secondary-color);
-            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 2px solid var(--accent-blue);
+            border-radius: 10px;
             box-sizing: border-box;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
-        .btn-smart:hover {
-            background: rgba(56, 189, 248, 0.1);
-        }
-        #timer { font-size: 1.2rem; color: var(--primary-color); margin: 20px 0; font-weight: bold; }
-        h2 { font-size: 1.3rem; color: #eee; margin-bottom: 10px; }
+        .btn-smart:hover { background: var(--accent-blue); color: black; }
+        #timer { font-size: 1.2rem; color: #888; margin: 20px 0; }
+        #seconds { color: var(--primary-color); font-weight: 900; font-size: 1.5rem; }
+        h2 { font-size: 1.4rem; color: #fff; margin-bottom: 5px; letter-spacing: -0.5px; }
+        .status-badge { font-size: 0.8rem; color: #00ff41; background: rgba(0,255,65,0.1); padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2 id="addon-name">Preparando seu arquivo...</h2>
+        <div class="status-badge">Arquivo Verificado e Seguro</div>
+        <h2 id="addon-name">Preparando Download...</h2>
 
         <div class="ad-slot-rect">
-            <script>
-                atOptions = {
-                    'key' : '426abcbdfb4a70aa4f9485b2ac18cca7',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                };
+            <script type="text/javascript">
+                atOptions = { 'key' : '426abcbdfb4a70aa4f9485b2ac18cca7', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
             </script>
-            <script src="https://www.highperformanceformat.com/426abcbdfb4a70aa4f9485b2ac18cca7/invoke.js"></script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/426abcbdfb4a70aa4f9485b2ac18cca7/invoke.js"></script>
         </div>
 
-        <p id="timer">O link aparecerá em <span id="seconds">10</span>s</p>
+        <p id="timer">Aguarde <span id="seconds">15</span> segundos...</p>
         
         <a href="#" id="finalLink" class="btn-download">BAIXAR AGORA</a>
         
-        <a href="https://www.effectivegatecpm.com/wkmf27xjg?key=0b7ad228bbad6d22d482c1d14da56160" target="_blank" id="smartBtn" class="btn-smart">Problemas no download? Use o Servidor 2</a>
+        <a href="https://www.effectivegatecpm.com/wkmf27xjg?key=0b7ad228bbad6d22d482c1d14da56160" target="_blank" id="smartBtn" class="btn-smart">🚀 DOWNLOAD ALTA VELOCIDADE (Sem espera)</a>
 
-        <div class="ad-slot-tall">
-            <script>
-                atOptions = {
-                    'key' : 'f62c6fdee83be2c4a8646d239bddc5c3',
-                    'format' : 'iframe',
-                    'height' : 300,
-                    'width' : 160,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/f62c6fdee83be2c4a8646d239bddc5c3/invoke.js"></script>
+        <div class="native-ad-box">
+            <script async="async" data-cfasync="false" src="https://pl28770174.effectivegatecpm.com/2b5f624a42dfb0234966c49addefa156/invoke.js"></script>
+            <div id="container-2b5f624a42dfb0234966c49addefa156"></div>
         </div>
     </div>
 
@@ -114,7 +103,7 @@
         const name = urlParams.get('name');
         if(name) document.getElementById('addon-name').textContent = decodeURIComponent(name);
 
-        let timeLeft = 10;
+        let timeLeft = 15; // CPM Aumentado com 15 segundos
         const timerElement = document.getElementById('seconds');
         const downloadBtn = document.getElementById('finalLink');
         const smartBtn = document.getElementById('smartBtn');
@@ -127,7 +116,7 @@
                 clearInterval(countdown);
                 timerText.style.display = 'none';
                 downloadBtn.style.display = 'block';
-                smartBtn.style.display = 'block'; // Mostra o botão do Smart Link junto
+                smartBtn.style.display = 'block';
                 downloadBtn.href = decodeURIComponent(finalUrl);
             }
         }, 1000);
