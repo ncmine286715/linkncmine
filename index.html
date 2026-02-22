@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ncmine - Download Center</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8967995144964134" crossorigin="anonymous"></script>
     <style>
         :root {
             --primary-color: #00ff41; 
@@ -46,27 +45,27 @@
         }
 
         .profile-container { text-align: center; margin: 40px 0; }
-        .profile-name { font-size: 2.5rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; }
+        .profile-name { font-size: 2.5rem; font-weight: 700; color: var(--primary-color); text-transform: uppercase; margin: 0; }
 
-        .links-wrapper { width: 90%; max-width: 700px; display: flex; flex-direction: column; gap: 15px; }
+        .links-wrapper { width: 90%; max-width: 700px; display: flex; flex-direction: column; gap: 12px; }
 
         .category-title {
-            font-size: 1.1rem; color: var(--text-color); margin-top: 40px;
-            margin-bottom: 10px; font-weight: 600; border-bottom: 2px solid #333;
-            padding-bottom: 5px; width: 100%;
+            font-size: 1.1rem; color: var(--text-color); margin-top: 35px;
+            margin-bottom: 8px; font-weight: 600; border-bottom: 2px solid #333;
+            padding-bottom: 5px; width: 100%; text-transform: uppercase; letter-spacing: 1px;
         }
 
         .link-item {
             background-color: var(--card-bg); border: 1px solid #333;
-            padding: 20px; text-decoration: none; color: white;
-            border-radius: 4px; text-align: center; font-weight: 500;
-            transition: background 0.2s; display: block;
+            padding: 18px; text-decoration: none; color: white;
+            border-radius: 6px; text-align: center; font-weight: 500;
+            transition: all 0.2s; display: block;
         }
 
-        .link-item:hover { background-color: #333; border-color: var(--primary-color); }
+        .link-item:hover { background-color: #333; border-color: var(--primary-color); transform: scale(1.02); }
         .featured { background: linear-gradient(90deg, #1e1e1e, #1a2a1a); border: 1px solid var(--accent-color); }
 
-        footer { margin-top: 60px; font-size: 0.9rem; color: #666; text-align: center; }
+        footer { margin-top: 60px; font-size: 0.9rem; color: #666; text-align: center; padding-bottom: 20px; }
 
         @media (max-width: 600px) {
             .video-popup { width: 140px; height: 79px; top: 10px; right: 10px; }
@@ -83,37 +82,73 @@
     <div class="site-container">
         <div class="help-banner">
             <strong style="color: var(--warning-color);">Dúvidas no Download?</strong><br>
-            <p style="font-size: 0.9rem; margin: 10px 0 0 0; color: #ccc;">O tutorial está fixado no topo!</p>
+            <p style="font-size: 0.85rem; margin: 5px 0 0 0; color: #ccc;">O tutorial está fixado no topo da tela!</p>
         </div>
 
         <div class="profile-container">
             <h1 class="profile-name">@ncmine</h1>
-            <p style="color: #aaa; margin-top: 5px;">Downloads Oficiais & Mods</p>
+            <p style="color: #aaa; margin-top: 5px;">Central Oficial de Downloads</p>
         </div>
 
         <div class="links-wrapper">
-            <div class="category-title">Social & Apoio</div>
+            
+            <div class="category-title">⭐ Destaques & Apoio</div>
             <a href="https://livepix.gg/ncmine" class="link-item featured" target="_blank">💎 Apoie no LivePix</a>
-            <a href="https://youtu.be/fN4BennXjTY" class="link-item" target="_blank">📺 Tutorial de Download</a>
+            <a href="https://youtu.be/fN4BennXjTY?si=9J0W6FCFEWmg9Ll6" class="link-item" target="_blank">📺 Tutorial: Como baixar</a>
+            <a href="https://www.terabox.com/referral/4401850417561" class="link-item" target="_blank">💵 Ganhe em Dólar (Webmaster)</a>
 
-            <div class="category-title">Downloads</div>
-            <a href="https://terabox.com/s/1cFiOsSNkmEbGkHDh66BUvA" class="link-item" target="_blank">🏗️ STRUCTURE BUILDER 1.5</a>
-            <a href="https://terabox.com/s/1qLEty2zb38QbR-AsOPk26A" class="link-item" target="_blank">⛏️ ChunkMiner</a>
-            </div>
+            <div class="category-title">🚀 Utilitários & Performance</div>
+            <a href="https://doodslink.app/s/13I_xXRunc2Xu-NxMJu8G1Q" class="link-item" target="_blank">🚀 NC Optimize 1.0 (MCPack)</a>
+            <a href="https://terabox.app/s/1IsI2ihiKMNi3LwyXaBUgJA" class="link-item" target="_blank">💻 OderSo Launcher</a>
+            <a href="https://terabox.app/s/1ww126lBvJGw_z7CmLYzsZw" class="link-item" target="_blank">🛠️ NC Utilities (Beta)</a>
+            <a href="https://terabox.app/s/1-np-iVbs6y-3yLsEUCMyZA" class="link-item" target="_blank">⏱️ FPSCounter</a>
+            <a href="https://terabox.app/s/16r11rsXoMKvfvFyA1tzJdw" class="link-item" target="_blank">🗺️ Minimap</a>
+
+            <div class="category-title">🏗️ Addons de Gameplay</div>
+            <a href="https://terabox.app/s/1cFiOsSNkmEbGkHDh66BUvA" class="link-item" target="_blank">🏗️ STRUCTURE BUILDER 1.5 Beta</a>
+            <a href="https://1024terabox.app/s/1L0HwnauivzYoDhQZje8-hQ" class="link-item" target="_blank">⭐ Essentials (Sem perder conquistas)</a>
+            <a href="https://terabox.app/s/10pXwMrrtHKzRbN05R4WBGA" class="link-item" target="_blank">🌽 Easy Farm Addon</a>
+            <a href="https://terabox.app/s/16du6rfr8MZPKFWaQ6aN8nA" class="link-item" target="_blank">🪄 Criativo Addon Graveto</a>
+            <a href="https://terabox.app/s/1qLEty2zb38QbR-AsOPk26A" class="link-item" target="_blank">⛏️ ChunkMiner (Com Conquistas)</a>
+            <a href="https://terabox.app/s/1AYCJfeUZGarKUraZKw-ulg" class="link-item" target="_blank">🌀 Teleport Addon</a>
+            <a href="https://terabox.app/s/1idBlhnxuDFcDZelYq7br-Q" class="link-item" target="_blank">🛡️ AutoTotem</a>
+            <a href="https://terabox.app/s/1KKr8NX6qpkzuI8hrOlA0vQ" class="link-item" target="_blank">✨ Auto Enchanter</a>
+            <a href="https://1024terabox.app/s/1B3PmMbLKyHrd9OvL_rgqlA" class="link-item" target="_blank">👁️ FORCE SPECTATOR</a>
+            <a href="https://1024terabox.app/s/1S1fawX4SDXHA2BtxU0C9ZQ" class="link-item" target="_blank">🌳 TREE CAPITATOR (Conquistas)</a>
+
+            <div class="category-title">💎 Mineração & Recursos</div>
+            <a href="https://tpi.li/Xw7tX6jf" class="link-item" target="_blank">🔥 Overworld Netherite</a>
+            <a href="https://terabox.app/s/13yIyNuLgVnYEGSbAyxUZmA" class="link-item" target="_blank">💎 Diamond Ultra 200%</a>
+            <a href="https://terabox.app/s/1Hpb_my24ZHkBxYz4QpT-vw" class="link-item" target="_blank">🔗 MultiplyOres</a>
+            <a href="https://terabox.app/s/1CcNVeUfTHLaDmh93fKQJZw" class="link-item" target="_blank">⚒️ Minérios+</a>
+            <a href="https://terabox.app/s/1lqhERBCKMq9zn5lNr2RQDw" class="link-item" target="_blank">🌑 Netherite+++</a>
+            <a href="https://terabox.app/s/1TLKROACwExgP0YZBavFm6g" class="link-item" target="_blank">🥇 EasyNetherite</a>
+            <a href="https://terabox.app/s/1GGTwCXPDEANEFes7dPLAOA" class="link-item" target="_blank">💎 Diamond Plus</a>
+            <a href="https://terabox.app/s/1cFIO3_4j1eEo9Xz6cBnuWw" class="link-item" target="_blank">💎 Diamond Plus (Conquistas)</a>
+
+            <div class="category-title">🎨 Visual & Texturas</div>
+            <a href="https://terabox.app/s/1e49Gxu7KIDKOSeB4lxcJgg" class="link-item" target="_blank">📊 Holagram Pack</a>
+            <a href="https://terabox.app/s/1E9QWkt7xOJ0eN09WkS7VUA" class="link-item" target="_blank">🕶️ Night Vision (Conquistas)</a>
+            <a href="https://terabox.app/s/1Xp0e39wMQpYf_lNo_qfmwA" class="link-item" target="_blank">🕶️ Night Vision ATUALIZADA</a>
+            <a href="https://1024terabox.app/s/1G1oFreRN4WGGt1Wd80mq7g" class="link-item" target="_blank">🕶️ Night Vision Pack Textura</a>
+            <a href="https://terabox.app/s/1L2BbJGqhVWjeltnMLTNPwA" class="link-item" target="_blank">🎵 Spotify Texture</a>
+            <a href="https://doodslink.com/s/1YHMoKw8JiW6KM9qr-h8D3Q" class="link-item" target="_blank">☀️ Advanced Day Pack</a>
+            <a href="https://1024terabox.app/s/17o6QyPvxG7P_Qv_ANYrRcg" class="link-item" target="_blank">🌈 RGB Outline</a>
+
+        </div>
 
         <footer>ncmine © 2026</footer>
     </div>
 
     <script>
+        // Redirecionamento automático para a página de espera
         document.querySelectorAll('.link-item').forEach(link => {
             const href = link.href;
-            // Verifica se o link é para um serviço de download
-            if (href.includes('terabox.com') || href.includes('doodslink.com') || href.includes('tpi.li') || href.includes('1024terabox.com')) {
+            if (href.includes('terabox') || href.includes('doodslink') || href.includes('tpi.li')) {
                 const name = encodeURIComponent(link.textContent.trim());
                 const target = encodeURIComponent(href);
-                // Redireciona para a página interna download.html
                 link.href = `download.html?name=${name}&url=${target}`;
-                link.removeAttribute('target'); 
+                link.removeAttribute('target');
             }
         });
     </script>
